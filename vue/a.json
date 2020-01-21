@@ -1,0 +1,128 @@
+{
+    "item":{
+        "2019-9-1":{
+            "用户量":{
+                "注册":"12388",
+                "DAU":"1123",
+                "登录次数":"789"
+            },
+            "付费":{
+                "付费金额":"12388",
+                "付费人数":"1123",
+                "注册率":"789",
+                "注册且付费":"83",
+                "arpu":"12",
+                "arppu":"222"
+            },
+            "LTV":{
+                "当日LTV":"12388",
+                "次日LTV":"1123",
+                "3日LTV":"789",
+                "4日LTV":"789",
+                "5日LTV":"789",
+                "6日LTV":"789"
+            },
+            "留存":{
+                "当日留存":"12388",
+                "次日留存":"1123",
+                "3日留存":"789",
+                "4日留存":"789",
+                "5日留存":"789",
+                "6日留存":"789"
+            }
+        },
+        "2019-9-2":{
+            "用户量":{
+                "注册":"12388",
+                "DAU":"1123",
+                "登录次数":"789"
+            },
+            "付费":{
+                "付费金额":"12388",
+                "付费人数":"1123",
+                "注册率":"789",
+                "注册且付费":"83",
+                "arpu":"12",
+                "arppu":"222"
+            },
+            "LTV":{
+                "当日LTV":"12388",
+                "次日LTV":"1123",
+                "3日LTV":"789",
+                "4日LTV":"789",
+                "5日LTV":"789",
+                "6日LTV":"789"
+            },
+            "留存":{
+                "当日留存":"12388",
+                "次日留存":"1123",
+                "3日留存":"789",
+                "4日留存":"789",
+                "5日留存":"789",
+                "6日留存":"789"
+            }
+        },
+        "2019-9-3":{
+            "用户量":{
+                "注册":"12388",
+                "DAU":"1123",
+                "登录次数":"789"
+            },
+            "付费":{
+                "付费金额":"12388",
+                "付费人数":"1123",
+                "注册率":"789",
+                "注册且付费":"83",
+                "arpu":"12",
+                "arppu":"222"
+            },
+            "LTV":{
+                "当日LTV":"12388",
+                "次日LTV":"1123",
+                "3日LTV":"789",
+                "4日LTV":"789",
+                "5日LTV":"789",
+                "6日LTV":"789"
+            },
+            "留存":{
+                "当日留存":"12388",
+                "次日留存":"1123",
+                "3日留存":"789",
+                "4日留存":"789",
+                "5日留存":"789",
+                "6日留存":"789"
+            }
+        }
+    }
+}
+
+{
+    "isIndeterminate":true,
+    "checkAll":false,
+    "checkedCities":[],
+    "cities":[]
+}
+
+<div style="float: right; margin: 0px 5px;padding-bottom: 10px;">
+      <el-button plain @click="outerVisible = true">
+        <svg-icon icon-class="list" />
+      </el-button>
+      <el-dialog :visible.sync="outerVisible" width="40%">
+        <el-dialog
+          :visible.sync="innerVisible"
+          width="30%"
+          title="添加标签"
+          append-to-body
+          show-close>
+          <div slot="footer" class="dialog-footer">
+            <el-button @click="innerVisible = false">取 消</el-button>
+            <el-button type="primary">确定</el-button>
+          </div>
+        </el-dialog>
+        <customColumn ref="customCol" :column-data="columnData" style="margin-top:-50px" @showInnerDialog1="showInnerDialog1" @func="getMsgFormSon"/>
+        <div slot="footer" class="dialog-footer" style="margin-top:-75px;padding-right: 75px;">
+          <el-button @click="outerVisible = false">取 消</el-button>
+          <el-button type="primary" @click="useCol">应用</el-button>
+        </div>
+      </el-dialog>
+    </div>
